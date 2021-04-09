@@ -5,6 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
+    "demo": "tsc && node dist/app.js add",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
