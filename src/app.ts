@@ -7,13 +7,13 @@ const questions = [
   {
     type: 'input',
     name: 'name',
-    message: 'Your name',
+    message: "What's your name?",
   },
 ];
 program
   .command('add')
   .alias('a')
-  .description('Add a customer')
+  .description('Enter name')
   .action(() => {
     inquirer
       .prompt(questions)
