@@ -5,12 +5,13 @@
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
-    "demo": "tsc && node dist/app.js add",
+    "demo": "tsc && node dist/app.js create",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cli-progress": "^3.9.0",
     "commander": "^7.2.0",
     "inquirer": "^8.0.0"
   },

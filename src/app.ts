@@ -7,12 +7,12 @@ const questions = [
   {
     type: 'input',
     name: 'mood',
-    message: 'On a scale of 1-10, how is your overall mood?',
+    message: 'On a scale of 1-10, how is your current mood?',
   },
   {
     type: 'input',
     name: 'note',
-    message: 'Include a small note (optional)',
+    message: 'Include a small note (optional):',
   },
 ];
 program
@@ -20,11 +20,12 @@ program
   .alias('c')
   .description('create mood report')
   .action(() => {
-    inquirer
-      .prompt(questions)
-      .then((answers) =>
-        console.log('Success. Your mood report was submitted.')
-      );
+    inquirer.prompt(questions).then((answers) => {
+      console.log('submitting...');
+      setTimeout(() => {
+        console.log('Success. Your mood report was submitted.');
+      }, 2000);
+    });
   });
 
 program.parse(process.argv);
