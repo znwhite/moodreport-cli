@@ -1,8 +1,9 @@
 {
-  "name": "moodreport-cli",
+  "name": "moodreport",
   "version": "1.0.0",
   "description": "mood report cli tool",
   "main": "dist/app.js",
+  "bin": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
     "demo": "tsc && node dist/app.js create",
