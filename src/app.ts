@@ -6,19 +6,24 @@ program.version('0.1.0').description('Mood reporter CLI app');
 const questions = [
   {
     type: 'input',
-    name: 'name',
-    message: "What's your name?",
+    name: 'mood',
+    message: 'On a scale of 1-10, how is your overall mood?',
+  },
+  {
+    type: 'input',
+    name: 'note',
+    message: 'Include a small note (optional)',
   },
 ];
 program
-  .command('add')
-  .alias('a')
-  .description('Enter name')
+  .command('create')
+  .alias('c')
+  .description('create mood report')
   .action(() => {
     inquirer
       .prompt(questions)
       .then((answers) =>
-        console.log(answers.name + "? That's seriously your name? yikes lol")
+        console.log('Success. Your mood report was submitted.')
       );
   });
 
